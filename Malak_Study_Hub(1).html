@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Malak Study Hub</title>
+<style>
+:root {
+  --site-primary: #A78BFA;
+  --site-on-primary: #FFF8FF;
+  --site-secondary: #39245F;
+  --site-on-secondary: #F7E9FF;
+  --site-background: #160F24;
+  --site-on-background: #F5ECFA;
+  --site-font-body: Tahoma, Arial, sans-serif;
+  --site-font-heading: Tahoma, Arial, sans-serif;
+  --site-heading-6: 1;
+  --site-spacing-scale: 1;
+  --site-radius-scale: 1;
+  --site-decoration-opacity: 1;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: var(--site-font-body); background: var(--site-background); color: var(--site-on-background); }
+.app { min-height: 100vh; width: 100%; background-color: var(--site-background); color: var(--site-on-background); padding: calc(22px * var(--site-spacing-scale)) 16px 40px; }
+.shell { max-width: 850px; margin: auto; }
+.hero { background: linear-gradient(135deg, #211532 0%, #39245F 58%, #573782 100%); color: var(--site-on-primary); border: 1px solid #65468E; border-radius: calc(26px * var(--site-radius-scale)); padding: 25px 22px; position: relative; overflow: hidden; box-shadow: 0 14px 35px #09061188; }
+.hero:after { content: '✦'; position: absolute; left: 22px; top: 8px; font-size: 72px; opacity: calc(.13 * var(--site-decoration-opacity)); }
+.kicker { font-size: 12px; letter-spacing: .4px; opacity: .85; }
+h1 { font-family: var(--site-font-heading); font-size: calc(30px * var(--site-heading-scale)); margin: 8px 0; }
+.hero p { margin: 0; line-height: 1.8; opacity: .92; }
+.stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin: 14px 0 22px; }
+.stat, .panel { background: #241A35; border: 1px solid #49345F; border-radius: calc(18px * var(--site-radius-scale)); padding: 15px; box-shadow: 0 8px 22px #09061155; }
+.stat strong { display: block; font-size: 22px; color: var(--site-primary); }
+.stat span { font-size: 12px; color: #D0C2E5; }
+section { margin-top: 20px; }
+h2 { font-size: calc(20px * var(--site-heading-scale)); margin: 0 0 12px; }
+.sub { color: #D0C2E5; font-size: 13px; margin: -5px 0 13px; line-height: 1.7; }
+.task { border: 1px solid #49345F; background: #241A35; border-radius: 15px; padding: 13px; margin: 9px 0; box-shadow: 0 5px 16px #09061144; }
+.task-top { display:flex; gap:10px; align-items:flex-start; }
+.task input[type=checkbox] { width:20px; height:20px; accent-color: var(--site-primary); margin-top:2px; flex:0 0 auto; }
+.task-title { font-weight:700; line-height:1.5; }
+.task-time { color: #C5A8FF; font-size: 12px; white-space:nowrap; }
+.task small { display:block; color: #D0C2E5; margin:5px 28px 0 0; line-height:1.6; }
+.task.done { opacity:.66; }
+.task.done .task-title { text-decoration: line-through; }
+.progress-wrap { height: 10px; border-radius: 20px; background: #49345F; overflow:hidden; margin-top:10px; }
+.progress { height:100%; width:0; background:linear-gradient(90deg,#8056C7,#C5A8FF); border-radius:20px; transition:width .2s; }
+.progress-line { display:flex; justify-content:space-between; font-size:12px; margin-top:8px; }
+.tabs { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px; }
+.tab { border:1px solid #59416F; color:var(--site-on-background); background:#241A35; border-radius:30px; padding:9px 14px; cursor:pointer; font:inherit; }
+.tab.active { background:var(--site-secondary); color:var(--site-on-secondary); border-color:var(--site-secondary); font-weight:700; }
+.resource { display:flex; justify-content:space-between; align-items:center; gap:12px; padding:13px 0; border-bottom:1px solid #49345F; line-height:1.6; }
+.resource:last-child { border:0; }
+a { color:var(--site-primary); font-weight:700; text-decoration:none; }
+a:hover { text-decoration:underline; }
+.pill { font-size:11px; background:var(--site-secondary); color:var(--site-on-secondary); border-radius:30px; padding:4px 8px; white-space:nowrap; }
+.note { border-right:4px solid #A78BFA; background:#302044; color:#F0E8FF; border-radius:12px; padding:13px; font-size:13px; line-height:1.8; margin-top:12px; }
+.reset { border:1px solid #59416F; background:#241A35; color:var(--site-on-background); border-radius:12px; padding:10px 14px; cursor:pointer; font:inherit; margin-top:12px; }
+footer { text-align:center; font-size:12px; color:#C7B7DD; margin-top:25px; }
+@media(max-width:520px){ .app{padding:14px 12px 30px}.hero{padding:21px 17px}h1{font-size:26px}.stats{gap:7px}.stat{padding:11px 8px}.stat strong{font-size:19px}.resource{align-items:flex-start;flex-direction:column;gap:5px} }
+:root { color-scheme: dark; }
+</style>
+</head>
+<body>
+<div class="app">
+ <main class="shell">
+  <header class="hero">
+   <div class="kicker">THIRD SECONDARY • 2027</div>
+   <h1>Malak Study Hub</h1>
+   <p>خطوة صغيرة كل مرة… لحد ما توصلي لهدفك ✨<br>مساحة ملك لتنظيم المذاكرة ومتابعة الإنجاز.</p>
+  </header>
+  <div class="stats" aria-live="polite">
+   <div class="stat"><strong id="percent">0%</strong><span>إنجاز الخطة</span></div>
+   <div class="stat"><strong id="finished">0</strong><span>مهام مكتملة</span></div>
+   <div class="stat"><strong id="remaining">0</strong><span>مهام متبقية</span></div>
+  </div>
+  <section class="panel">
+   <h2>📌 تقدمك النهارده</h2>
+   <div class="progress-wrap"><div class="progress" id="bar"></div></div>
+   <div class="progress-line"><span>كمّلي بهدوء وتركيز</span><b id="progressText">0 من 0</b></div>
+  </section>
+  <section>
+   <h2>☑️ قائمة مهام اليوم</h2>
+   <p class="sub">علّمي على كل مهمة بعد ما تخلصيها. تقدري تتابعي النسبة مباشرة داخل الصفحة.</p>
+   <div class="tabs" role="tablist">
+    <button class="tab active" data-filter="all">كل المهام</button>
+    <button class="tab" data-filter="bio">الأحياء</button>
+    <button class="tab" data-filter="chem">الكيمياء</button>
+    <button class="tab" data-filter="break">الاستراحات</button>
+   </div>
+   <div id="tasks">
+    <div class="task" data-subject="bio"><div class="task-top"><input type="checkbox"><div><div class="task-title">مراجعة فصل الهرمونات وفهم النقاط الأساسية</div><span class="task-time">12:30 – 2:00</span></div></div><small>استرجاع المعلومات من الذاكرة قبل فتح الكتاب مرة أخرى.</small></div>
+    <div class="task" data-subject="bio"><div class="task-top"><input type="checkbox"><div><div class="task-title">حل 25–30 سؤالًا على الهرمونات</div><span class="task-time">ضمن جلسة الأحياء</span></div></div><small>ابدئي بنفسك، ثم صححي وحددي سبب كل خطأ.</small></div>
+    <div class="task" data-subject="break"><div class="task-top"><input type="checkbox"><div><div class="task-title">استراحة وغداء</div><span class="task-time">2:00 – 2:30</span></div></div></div>
+    <div class="task" data-subject="bio"><div class="task-top"><input type="checkbox"><div><div class="task-title">دراسة الجزء المقرر من فصل التكاثر</div><span class="task-time">2:30 – 3:45</span></div></div><small>فهم ثم تسميع سريع دون كتاب.</small></div>
+    <div class="task" data-subject="bio"><div class="task-top"><input type="checkbox"><div><div class="task-title">حل 15–20 سؤالًا على التكاثر</div><span class="task-time">ضمن جلسة الأحياء</span></div></div></div>
+    <div class="task" data-subject="break"><div class="task-top"><input type="checkbox"><div><div class="task-title">استراحة قصيرة</div><span class="task-time">3:45 – 4:15</span></div></div></div>
+    <div class="task" data-subject="chem"><div class="task-top"><input type="checkbox"><div><div class="task-title">مراجعة الباب الأول كيمياء</div><span class="task-time">4:15 – 6:15</span></div></div><small>القوانين والتعريفات والأفكار والمعادلات حسب منهجك.</small></div>
+    <div class="task" data-subject="chem"><div class="task-top"><input type="checkbox"><div><div class="task-title">حل أسئلة متنوعة على الباب الأول</div><span class="task-time">ضمن جلسة الباب الأول</span></div></div></div>
+    <div class="task" data-subject="break"><div class="task-top"><input type="checkbox"><div><div class="task-title">استراحة وصلاة</div><span class="task-time">6:15 – 6:45</span></div></div></div>
+    <div class="task" data-subject="chem"><div class="task-top"><input type="checkbox"><div><div class="task-title">مراجعة الباب الثاني كيمياء</div><span class="task-time">6:45 – 8:45</span></div></div><small>ركزي على الفهم واسترجاع المعلومات بدل القراءة المتكررة.</small></div>
+    <div class="task" data-subject="chem"><div class="task-top"><input type="checkbox"><div><div class="task-title">حل أسئلة متنوعة على الباب الثاني</div><span class="task-time">ضمن جلسة الباب الثاني</span></div></div></div>
+    <div class="task" data-subject="break"><div class="task-top"><input type="checkbox"><div><div class="task-title">استراحة وعشاء</div><span class="task-time">8:45 – 9:15</span></div></div></div>
+    <div class="task" data-subject="chem"><div class="task-top"><input type="checkbox"><div><div class="task-title">حل امتحان شامل على أول بابين</div><span class="task-time">9:15 – 10:45</span></div></div><small>بوقت محدد، وبعدها تصحيح الأخطاء وإعادة حلها.</small></div>
+    <div class="task" data-subject="chem"><div class="task-top"><input type="checkbox"><div><div class="task-title">مراجعة أخطاء الكيمياء والقوانين</div><span class="task-time">10:45 – 11:00</span></div></div></div>
+   </div>
+   <button class="reset" id="reset">إلغاء كل علامات الإنجاز</button>
+  </section>
+  <section class="panel">
+   <h2>📚 مكتبة مصادر الامتحانات</h2>
+   <p class="sub">روابط أصلية أو مصادر تشير بوضوح إلى نماذج الوزارة. افتحيها لتنزيل الامتحانات ومراجعة الإجابات.</p>
+   <div class="resource"><div><b>المكتبة الإلكترونية لوزارة التربية والتعليم</b><br><small>النماذج الاسترشادية للسنوات الدراسية الحديثة</small></div><a href="https://ellibrary.moe.gov.eg/" target="_blank" rel="noopener">فتح المكتبة ↗</a></div>
+   <div class="resource"><div><b>نماذج الوزارة الاسترشادية 2025</b><br><small>رابط الوزارة للعام الدراسي 2024/2025</small></div><a href="https://moe.gov.eg/ar/models2025/" target="_blank" rel="noopener">فتح النماذج ↗</a></div>
+   <div class="resource"><div><b>أسئلة وإجابات امتحانات 2023/2024</b><br><small>بيان رسمي عن إتاحة النماذج الأربعة والإجابات عبر مدرستنا بلس</small></div><a href="https://mediadr.sis.gov.eg/handle/123456789/67769" target="_blank" rel="noopener">عرض البيان الرسمي ↗</a></div>
+   <div class="resource"><div><b>النماذج الاسترشادية 2026</b><br><small>بيان رسمي يوضح إتاحة 10 نماذج لكل مادة</small></div><a href="https://sis.gov.eg/ar/المركز-الإعلامي/الأخبار/وزارة-التعليم-تطرح-النماذج-الاسترشادية-لامتحانات-الثانوية-العامة-على-موقعها/" target="_blank" rel="noopener">عرض البيان ↗</a></div>
+   <div class="note"><b>مهم:</b> المكتبة هنا بداية موثوقة للوصول للمصادر، وليست تجميعًا مكتملًا لأسئلة كل جزئية من 2020 إلى 2026. لن أنسب سؤالًا لسنة أو أقول إنه رسمي إلا بعد التحقق من ورقة الامتحان ومصدرها.</div>
+  </section>
+  <section class="panel">
+   <h2>📝 سجل الأخطاء</h2>
+   <p class="sub">اكتبي السؤال أو الفكرة التي أخطأتِ فيها وسبب الخطأ، ثم ارجعي لها في المراجعة.</p>
+   <textarea id="mistakes" rows="5" placeholder="مثال: نسيت الفرق بين ... / أخطأت بسبب عدم فهم ..." style="width:100%;padding:12px;border:1px solid #BBAAC8;border-radius:12px;background:transparent;color:inherit;font:inherit;line-height:1.7"></textarea>
+  </section>
+  <footer>Malak Study Hub • خطوة اليوم تصنع فرق بكرة 🌷</footer>
+ </main>
+</div>
+<script>
+const taskNodes = [...document.querySelectorAll('.task')];
+const boxes = taskNodes.map(t => t.querySelector('input'));
+function update(){
+ const total=boxes.length, done=boxes.filter(b=>b.checked).length, pct=Math.round(done/total*100);
+ document.getElementById('percent').textContent=pct+'%';
+ document.getElementById('finished').textContent=done;
+ document.getElementById('remaining').textContent=total-done;
+ document.getElementById('bar').style.width=pct+'%';
+ document.getElementById('progressText').textContent=done+' من '+total;
+ taskNodes.forEach(t=>t.classList.toggle('done',t.querySelector('input').checked));
+}
+boxes.forEach(b=>b.addEventListener('change',update));
+document.querySelectorAll('.tab').forEach(btn=>btn.addEventListener('click',()=>{
+ document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active')); btn.classList.add('active');
+ taskNodes.forEach(t=>t.hidden=btn.dataset.filter!=='all' && t.dataset.subject!==btn.dataset.filter);
+}));
+document.getElementById('reset').addEventListener('click',()=>{boxes.forEach(b=>b.checked=false);update();});
+update();
+</script>
+</body>
+</html>
+ml>
